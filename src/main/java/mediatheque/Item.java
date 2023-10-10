@@ -1,6 +1,8 @@
 package mediatheque;
 
 public abstract class Item {
+
+	public abstract void accept(ItemVisitor iv);
 	private String title;
 
 	protected Item(String title) {
@@ -13,6 +15,8 @@ public abstract class Item {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
+
 
 	public abstract void print() ;
 
